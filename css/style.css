@@ -438,6 +438,18 @@ header.ark-header {
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 
+/* Contact page grid */
+.contact-grid {
+  grid-template-columns: 1fr 2fr;
+}
+
+/* Stack the contact grid on small screens */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Applications grid specific layout */
 @media (max-width: 768px) {
   .applications-grid {
