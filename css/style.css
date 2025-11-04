@@ -484,7 +484,6 @@ header.ark-header {
 .ark-nav-menu .ark-btn-primary {
   /* Space the CTA away from the menu items on desktop and adjust padding for
      alignment with the navigation links. */
-  margin-left: 2rem;
   padding: 0.5rem 1rem;
 }
 
