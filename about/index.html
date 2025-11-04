@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Arkitor | Canadian‑Owned Magnesium Oxide Specialists</title>
+  <meta name="description" content="Learn about Arkitor Building Technologies: a Canadian‑owned manufacturer of premium magnesium oxide panels. Discover our story, values, certifications and commitment to sustainability.">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Favicon for the website -->
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <!-- Open Graph meta tags for SEO -->
+  <meta property="og:title" content="About Arkitor Building Technologies">
+  <meta property="og:description" content="Learn about Arkitor Building Technologies: a Canadian‑owned manufacturer of premium magnesium oxide panels. Discover our story, values, certifications and commitment to sustainability.">
+  <meta property="og:image" content="../assets/homepage-banner.png">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <!-- Header -->
+  <header class="ark-header">
+    <div class="ark-container ark-nav" style="width:100%;">
+      <div style="display:flex; align-items:center; gap:0.5rem;">
+        <a href="../" aria-label="Arkitor homepage"><img src="../assets/logo.svg" alt="Arkitor logo" style="height:32px;width:auto;"/></a>
+        <a href="../" style="font-weight:600; font-size:1rem; color:var(--ark-primary);">Arkitor Building Technologies</a>
+      </div>
+      <button class="ark-nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">&#9776;</button>
+      <nav id="nav-menu" class="ark-nav-menu">
+        <ul>
+          <li><a href="../products/">Products</a></li>
+          <li><a href="../applications/">Applications</a></li>
+          <li><a href="../resources/">Resources</a></li>
+        <li><a href="../about/" class="active">About</a></li>
+        </ul>
+        <!-- Primary call to action button -->
+        <a href="../contact/" class="ark-btn ark-btn-primary">Request a Sample</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="ark-hero" style="background-image: linear-gradient(135deg, var(--ark-dark-bg), var(--ark-primary));">
+    <!-- Add a grid pattern overlay for visual interest -->
+    <div class="ark-grid-overlay">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="hero-grid-about" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="white" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hero-grid-about)" />
+      </svg>
+    </div>
+    <div class="ark-container">
+      <div class="ark-hero-content" style="text-align:left; max-width:800px;">
+        <div class="ark-pill-yellow" style="margin-bottom:1.5rem; display:inline-flex;">
+          <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-secondary);"></div>
+          <span>Building the Future of Construction</span>
+        </div>
+        <h1>About Arkitor</h1>
+        <p>Canadian-owned and operated, delivering innovative magnesium oxide building solutions across North America.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section class="ark-section">
+    <div class="ark-container">
+      <div style="display:flex; flex-wrap:wrap; gap:3rem; align-items:center;">
+        <!-- Text column -->
+        <div style="flex:1.2 1 400px;">
+          <span style="display:inline-block; background-color: rgba(58,111,146,0.1); color: var(--ark-primary); padding:0.5rem 1rem; border-radius:var(--ark-radius); font-size:0.75rem; font-weight:600; text-transform: uppercase; letter-spacing:0.05em; margin-bottom:1rem;">Our Story</span>
+          <h2 style="margin-bottom:1rem; font-size:2rem; font-weight:600; color: var(--ark-text-dark);">Engineering Excellence Since Day One</h2>
+          <p style="margin-bottom:1rem; color: var(--ark-text-light); font-size:1.125rem; line-height:1.6;">Founded with a vision to revolutionize the building materials industry, Arkitor Building Technologies has become a leading manufacturer of premium magnesium oxide panels in North America.</p>
+          <p style="margin-bottom:1rem; color: var(--ark-text-light); font-size:1.125rem; line-height:1.6;">Our commitment to innovation, quality and sustainability drives everything we do. We've developed proprietary MgO formulations that outperform traditional building materials while maintaining environmental responsibility.</p>
+          <p style="margin-bottom:0; color: var(--ark-text-light); font-size:1.125rem; line-height:1.6;">Today, our products are trusted by builders, architects and contractors across residential, commercial and institutional projects throughout Canada and the United States.</p>
+        </div>
+        <!-- Image column with yellow offset square -->
+        <div style="flex:0.8 1 300px; position:relative;">
+          <div style="position:relative; border-radius:var(--ark-radius-lg); overflow:hidden; box-shadow:0 10px 20px rgba(0,0,0,0.1);">
+            <img src="../assets/factory.png" alt="Arkitor Manufacturing Facility" style="width:100%; height:400px; object-fit:cover;">
+          </div>
+          <div style="position:absolute; bottom:-1rem; right:-1rem; width:140px; height:140px; background-color: var(--ark-secondary); border-radius:var(--ark-radius-lg); z-index:-1;"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Values -->
+  <section class="ark-section" style="background-color: var(--ark-light-bg);">
+    <div class="ark-container">
+      <h2 class="ark-section-subtitle">Our Values</h2>
+      <h2 class="ark-section-title">What Drives Us</h2>
+      <p class="ark-section-description">Core principles that guide our innovation and customer relationships.</p>
+      <div class="ark-grid ark-grid-4">
+        <div class="ark-card" style="text-align:center;">
+          <!-- Factory/Manufacturing icon (lucide factory style) -->
+          <svg class="ark-feature-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ark-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M3 21V8l5 3l4-3l4 3l5-3v13H3z"></path>
+            <path d="M3 13h18"></path>
+          </svg>
+          <h3>Quality Manufacturing</h3>
+          <p>State‑of‑the‑art facilities with rigorous quality control at every stage of production.</p>
+        </div>
+        <div class="ark-card" style="text-align:center;">
+          <!-- Customer Focus icon (lucide users) -->
+          <svg class="ark-feature-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--ark-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+            <path d="M16 3.128a4 4 0 0 1 0 7.744"></path>
+            <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+            <circle cx="9" cy="7" r="4"></circle>
+          </svg>
+          <h3>Customer Focus</h3>
+          <p>Dedicated technical support to ensure your project succeeds from specification to installation.</p>
+        </div>
+        <div class="ark-card" style="text-align:center;">
+          <!-- Innovation icon (lucide award) -->
+          <svg class="ark-feature-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--ark-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+            <circle cx="12" cy="8" r="6"></circle>
+          </svg>
+          <h3>Innovation</h3>
+          <p>Continuous R&amp;D investment to develop next‑generation building materials and solutions.</p>
+        </div>
+        <div class="ark-card" style="text-align:center;">
+          <!-- Sustainability/Leaf icon (lucide leaf style) -->
+          <svg class="ark-feature-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="var(--ark-primary)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+          </svg>
+          <h3>Sustainability</h3>
+          <p>Environmental responsibility through zero‑VOC products and sustainable manufacturing practices.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section class="ark-section">
+    <div class="ark-container">
+      <h2 class="ark-section-subtitle">Certifications</h2>
+      <h2 class="ark-section-title">Industry‑Leading Standards</h2>
+      <p class="ark-section-description">Our products meet or exceed all major North American building codes and standards.</p>
+      <div class="ark-grid ark-grid-3">
+        <!-- ASTM International card -->
+        <div class="ark-card" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff); border: 1px solid rgba(226,232,240,0.6); border-radius:1rem; padding:2rem;">
+          <h3 class="mb-6" style="margin-bottom:1.5rem; color: var(--ark-text-dark);">ASTM International</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">E136 - Non‑Combustibility</span>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">C1186 - Flat Fiber‑Cement Sheets</span>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">S101 - Fire Endurance</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Canadian Standards card -->
+        <div class="ark-card" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff); border: 1px solid rgba(226,232,240,0.6); border-radius:1rem; padding:2rem;">
+          <h3 class="mb-6" style="margin-bottom:1.5rem; color: var(--ark-text-dark);">Canadian Standards</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">CAN/ULC‑S101</span>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">CAN/ULC‑S102</span>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">National Building Code</span>
+            </li>
+          </ul>
+        </div>
+        <!-- Environmental card -->
+        <div class="ark-card" style="background: linear-gradient(to bottom right, #f8fafc, #ffffff); border: 1px solid rgba(226,232,240,0.6); border-radius:1rem; padding:2rem;">
+          <h3 class="mb-6" style="margin-bottom:1.5rem; color: var(--ark-text-dark);">Environmental</h3>
+          <ul style="list-style:none; padding:0; margin:0;">
+            <li style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">Zero VOC Certified</span>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:0.75rem; margin-bottom:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">LEED Compatible</span>
+            </li>
+            <li style="display:flex; align-items:flex-start; gap:0.75rem;">
+              <div style="width:1.25rem; height:1.25rem; border-radius:50%; background-color: rgba(58,111,146,0.1); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-primary);"></div>
+              </div>
+              <span style="color: var(--ark-text-light);">Green Building Approved</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sustainability -->
+  <section class="ark-section" style="background-color: var(--ark-light-bg);">
+    <div class="ark-container">
+      <h2 class="ark-section-subtitle">Sustainability</h2>
+      <h2 class="ark-section-title">Committed to Environmental Responsibility</h2>
+      <div style="display:flex; flex-wrap:wrap; gap:2rem; align-items:center;">
+        <div style="flex:1 1 300px;">
+          <img src="../assets/sustainability zero voc.png" alt="Sustainable building" style="width:100%; border-radius:var(--ark-radius); object-fit:cover;">
+        </div>
+        <div style="flex:2 1 300px;">
+          <ul style="list-style: disc; margin-left:1rem; color:var(--ark-text-dark);">
+            <li>Zero VOC emissions for healthier indoor air quality</li>
+            <li>Sustainable raw material sourcing and responsible mining practices</li>
+            <li>Energy‑efficient manufacturing processes</li>
+            <li>Recyclable and reusable product lifecycle</li>
+            <li>Contributes to LEED® credits for green building projects</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="ark-section" style="background: linear-gradient(135deg, var(--ark-primary), #2D5875); color:#fff;">
+    <div class="ark-container" style="text-align:center;">
+      <h2 style="margin-bottom:1rem; font-size:2rem; font-weight:600;">Partner With Us</h2>
+      <p style="margin-bottom:2rem; font-size:1.25rem; max-width:600px; margin-left:auto; margin-right:auto; color:#e2e8f0;">Our team is ready to support your next project with samples, specifications and technical guidance.</p>
+      <a href="../contact/" class="ark-btn ark-btn-secondary">Get in Touch</a>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section class="ark-section" id="contact-form">
+    <div class="ark-container">
+      <div class="ark-form-wrapper">
+        <h2 class="ark-section-title" style="text-align:center;">Get in Touch</h2>
+        <p style="max-width:600px; margin:0 auto 2rem auto; text-align:center; color: var(--ark-text-light);">Have a question, need a quote or want a sample? Fill out the form below and our team will respond within 24 hours.</p>
+        <form id="contact-form-about" action="https://formspree.io/f/xjkplkej" method="POST" class="ark-form">
+          <div class="ark-form-grid">
+            <div class="ark-field">
+              <label for="about-name">Full Name *</label>
+              <input type="text" id="about-name" name="name" required>
+            </div>
+            <div class="ark-field">
+              <label for="about-email">Email Address *</label>
+              <input type="email" id="about-email" name="email" required>
+            </div>
+            <div class="ark-field">
+              <label for="about-company">Company Name</label>
+              <input type="text" id="about-company" name="company">
+            </div>
+            <div class="ark-field">
+              <label for="about-province">Province / State</label>
+              <input type="text" id="about-province" name="province">
+            </div>
+          </div>
+          <div style="margin-top:1rem;">
+            <label>Product Interest (Select all that apply)</label>
+                <div class="ark-checkboxes" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap:1rem; margin-top:0.5rem;">
+              <label><input type="checkbox" name="interest" value="ArkiShield"> ArkiShield™</label>
+              <label><input type="checkbox" name="interest" value="ArkiCore"> ArkiCore™</label>
+              <label><input type="checkbox" name="interest" value="ArkiFloor"> ArkiFloor™</label>
+            </div>
+          </div>
+          <div style="margin-top:1rem;">
+            <label for="about-message">Tell us about your project *</label>
+            <textarea id="about-message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="ark-btn ark-btn-primary" style="margin-top:1rem;">Send Message</button>
+          <p id="about-form-status" style="margin-top:0.5rem;"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const formAbout = document.getElementById('contact-form-about');
+    if (formAbout) {
+      formAbout.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const status = document.getElementById('about-form-status');
+        const data = new FormData(formAbout);
+        const interests = [...formAbout.querySelectorAll('input[name="interest"]:checked')].map(i => i.value).join(', ');
+        if (interests) {
+          const current = data.get('message');
+          data.set('message', current + '\n\nInterested in: ' + interests);
+        }
+        try {
+          const resp = await fetch(formAbout.action, {
+            method: formAbout.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (resp.ok) {
+            status.textContent = 'Thanks for your submission!';
+            formAbout.reset();
+          } else {
+            const resData = await resp.json();
+            if (resData.errors) {
+              status.textContent = resData.errors.map(e => e.message).join(', ');
+            } else {
+              status.textContent = 'Oops! There was a problem submitting your form';
+            }
+          }
+        } catch (err) {
+          status.textContent = 'Oops! There was a problem submitting your form';
+        }
+      });
+    }
+  </script>
+
+  <!-- Unified Footer -->
+  <footer class="ark-footer">
+    <div class="ark-container">
+      <div class="ark-footer-top" style="display:flex; flex-wrap:wrap; gap:2rem;">
+        <div style="flex:1 1 250px;">
+          <img src="../assets/logo-white.svg" alt="Arkitor logo" style="height:40px; width:auto; margin-bottom:1rem;">
+          <h4 style="color: var(--ark-secondary); margin-bottom:0.25rem; font-size:1rem; font-weight:600;">Arkitor Building Technologies</h4>
+          <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.5; max-width:280px;">Canadian‑owned manufacturer of premium magnesium oxide building panels.</p>
+        </div>
+        <div style="flex:1 1 150px;">
+          <h4 style="color:#ffffff; margin-bottom:0.5rem; font-size:1rem; font-weight:600;">Products</h4>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="../arkishield/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">ArkiShield™ Exterior</a></li>
+            <li><a href="../arkicore/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">ArkiCore™ Interior</a></li>
+            <li><a href="../arkifloor/" style="color:#cbd5e1; display:block;">ArkiFloor™ Subfloor</a></li>
+          </ul>
+        </div>
+        <div style="flex:1 1 150px;">
+          <h4 style="color:#ffffff; margin-bottom:0.5rem; font-size:1rem; font-weight:600;">Solutions</h4>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="../applications/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">Applications</a></li>
+            <li><a href="../resources/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">Technical Resources</a></li>
+            <li><a href="../resources/" style="color:#cbd5e1; display:block;">Case Studies</a></li>
+          </ul>
+        </div>
+        <div style="flex:1 1 150px;">
+          <h4 style="color:#ffffff; margin-bottom:0.5rem; font-size:1rem; font-weight:600;">Company</h4>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="../about/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">About Arkitor</a></li>
+            <li><a href="../resources/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">Sustainability</a></li>
+            <li><a href="../contact/" style="color:#cbd5e1; display:block;">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ark-footer-bottom" style="margin-top:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <p style="color:#cbd5e1; font-size:0.875rem;">&copy; 2025 Arkitor Building Technologies Inc. All rights reserved.</p>
+        <div class="ark-pill-yellow">
+          <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-secondary);"></div>
+          <span>Canadian‑Owned &amp; Engineered</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Navigation Toggle Script -->
+  <script>
+    function toggleNav() {
+      var menu = document.getElementById('nav-menu');
+      if (menu) {
+        menu.classList.toggle('open');
+      }
+    }
+  </script>
+</body>
+</html>

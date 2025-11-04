@@ -1,0 +1,796 @@
+/*
+  Custom stylesheet for Arkitor static website
+
+  This file defines a simple design system inspired by the original
+  TypeScript/React implementation. It uses a neutral typography,
+  generous spacing and a limited colour palette to create a clear
+  hierarchy. All classes are prefixed with `ark-` to avoid
+  collisions with third‑party styles on GitHub Pages. Feel free
+  to extend or override these definitions as your project evolves.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* Colour variables */
+:root {
+  --ark-primary: #3A6F92;      /* deep blue used for headings and accents */
+  --ark-secondary: #FBBF24;    /* warm yellow used for calls to action */
+  --ark-dark-bg: #0f172a;      /* dark background for hero sections */
+  --ark-light-bg: #f8fafc;     /* light background for neutral sections */
+  --ark-text-dark: #1e293b;    /* dark text colour */
+  --ark-text-light: #64748b;   /* muted text colour */
+  --ark-border: #e2e8f0;       /* light grey border colour */
+  --ark-radius: 0.5rem;        /* default corner radius for buttons and small elements */
+  --ark-radius-lg: 0.75rem;    /* larger radius for cards and sections */
+  --ark-radius-xl: 1rem;       /* extra large radius for featured elements */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: var(--ark-text-dark);
+  background-color: #ffffff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Layout wrappers */
+.ark-container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+header.ark-header {
+  /* Semi‑transparent white header with backdrop blur and subtle border. */
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(226, 232, 240, 0.6);
+  color: var(--ark-dark-bg);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  padding: 0;
+}
+
+.ark-header-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ark-header-logo {
+  height: 32px;
+  width: auto;
+}
+
+.ark-header-title {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--ark-primary);
+}
+
+.ark-header .ark-nav {
+  width: 100%;
+}
+
+.ark-header .ark-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 5rem;
+}
+
+.ark-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Navigation links styling */
+.ark-nav-menu a {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  color: var(--ark-dark-bg);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Active page styling: tinted primary background with primary text */
+.ark-nav-menu a.active {
+  background-color: rgba(58, 111, 146, 0.1);
+  color: var(--ark-primary);
+}
+
+/* Hover state: lighten background and darken text */
+.ark-nav-menu a:hover {
+  color: var(--ark-primary);
+  background-color: rgba(226, 232, 240, 0.5);
+}
+
+/* Responsive navigation */
+.ark-nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  /* Dark icon colour on white header */
+  color: var(--ark-dark-bg);
+  font-size: 1.75rem;
+  cursor: pointer;
+
+  /* Push the toggle icon to the far right within the nav container.  When
+     space permits, this ensures the hamburger sits separately from the
+     logo and tagline. */
+  margin-left: auto;
+}
+
+.ark-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+@media (max-width: 768px) {
+  .ark-nav-toggle {
+    display: block;
+  }
+  .ark-nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+  }
+  .ark-nav-menu.open {
+    display: flex;
+  }
+  .ark-nav-menu ul {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+  .ark-nav-menu a {
+    display: block;
+    width: 100%;
+  }
+
+  /* Make the primary call‑to‑action in the mobile nav full width and
+     remove any excessive margins so it doesn’t overflow the screen. */
+  .ark-nav-menu .ark-btn-primary {
+    width: 100%;
+    display: inline-flex;
+    justify-content: center;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+}
+
+/* Form grid for contact forms */
+.ark-form-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@media (max-width: 768px) {
+  .ark-form-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Resource Section Styles */
+.ark-resource-section {
+  margin-bottom: 4rem;
+}
+
+.ark-section-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ark-section-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.75rem;
+  background-color: var(--ark-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.ark-section-header h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.ark-resource-card {
+  background-color: #fff;
+  border: 1px solid var(--ark-border);
+  border-radius: var(--ark-radius);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.ark-resource-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+.ark-resource-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ark-text-dark);
+}
+
+.ark-resource-content p {
+  font-size: 0.8rem;
+  color: var(--ark-text-light);
+  margin: 0;
+}
+
+.ark-resource-download {
+  color: var(--ark-primary);
+  transition: transform 0.2s ease;
+}
+
+.ark-resource-card:hover .ark-resource-download {
+  transform: scale(1.1);
+}
+
+/* Hero section */
+.ark-hero {
+  position: relative;
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  min-height: 30vh; /* Default height for all pages */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+/* Homepage specific hero height */
+.homepage-hero {
+  min-height: 60vh;
+  padding: 4rem 0;
+}
+
+.ark-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Grid overlay for hero sections.  Adds a subtle pattern of diagonal lines over
+   background images to echo the design in the provided reference.  The
+   overlay uses absolute positioning to cover the entire hero area and a
+   lowered opacity so the underlying image remains visible. */
+.ark-hero .ark-grid-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ark-hero .ark-grid-overlay svg {
+  width: 100%;
+  height: 100%;
+}
+
+.ark-hero .ark-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+}
+
+.ark-hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.ark-hero p {
+  font-size: 1.25rem;
+  color: #dbeafe;
+  margin-bottom: 1.5rem;
+}
+
+/* Button styles */
+.ark-btn {
+  /* Use flexbox to vertically centre button text and icons */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--ark-radius);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.1s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.ark-btn-primary {
+  background-color: var(--ark-secondary);
+  color: var(--ark-dark-bg);
+}
+
+.ark-btn-primary:hover {
+  background-color: #f59e0b;
+}
+
+.ark-btn-secondary {
+  background-color: var(--ark-primary);
+  color: #ffffff;
+}
+
+.ark-btn-secondary:hover {
+  background-color: #2d5875;
+}
+
+.ark-btn-light {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.ark-btn-light:hover {
+  background-color: #ffffff;
+  color: var(--ark-dark-bg);
+}
+
+/* Call‑out badge used in hero sections (e.g., Canadian‑Owned & Engineered).  */
+.ark-callout {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Yellow call‑out used in footer bottom bar to denote Canadian ownership. */
+.ark-pill-yellow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(251, 191, 36, 0.2);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(251, 191, 36, 0.3);
+  border-radius: 9999px;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--ark-secondary);
+}
+
+/* Pulsing dot used in call‑outs.  The animation grows and shrinks the dot. */
+.pulse-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: var(--ark-secondary);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+}
+
+/* Grid layouts */
+.ark-grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.ark-grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.ark-grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* Applications grid specific layout */
+@media (max-width: 768px) {
+  .applications-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Force three‑column sections to stack to a single column on narrow screens.
+   The auto‑fit behaviour above will try to fill as many columns as possible
+   based on a minimum width. However, specifying an explicit single column
+   below 768px ensures product and application cards stack neatly on mobile. */
+@media (max-width: 768px) {
+  .ark-grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ark-grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+/* Small icon used in feature cards. Icons are sized consistently and
+   spaced beneath their headings. */
+/* Feature icons (used in advantages and values sections).  Display as
+   consistent 48px squares with a light background and rounded corners.
+   When used with inline SVGs the padding centres the drawing within the
+   square. */
+.ark-feature-icon {
+  width: 48px;
+  height: 48px;
+  padding: 6px;
+  background-color: var(--ark-light-bg);
+  border-radius: var(--ark-radius);
+  margin-bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Position the call‑to‑action button within the navigation menu on
+   desktop screens. Adds left margin so it sits apart from the list
+   of navigation links. On mobile this margin is removed by the
+   responsive rules above. */
+.ark-nav-menu .ark-btn-primary {
+  /* Space the CTA away from the menu items on desktop and adjust padding for
+     alignment with the navigation links. */
+  margin-left: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+/* Contact form wrapper provides a white card with border and shadow
+   similar to the provided design reference. */
+.ark-form-wrapper {
+  background-color: #ffffff;
+  border: 1px solid var(--ark-border);
+  border-radius: var(--ark-radius);
+  padding: 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* Checkbox styling for product interest options */
+.ark-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 0.5rem;
+  text-align: left;
+}
+
+.ark-checkboxes label {
+  display: flex;
+  align-items: center;
+  background-color: #f8fafc;
+  border: 1px solid var(--ark-border);
+  border-radius: var(--ark-radius);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+.ark-checkboxes input[type="checkbox"] {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+/* Card component */
+.ark-card {
+  background-color: #ffffff;
+  border: 1px solid var(--ark-border);
+  border-radius: var(--ark-radius-lg);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s ease, transform 0.1s ease;
+}
+
+.ark-card:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+}
+
+/* Section headings */
+.ark-section {
+  padding: 4rem 0;
+}
+
+.ark-section-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ark-text-dark);
+  text-align: center;
+}
+
+.ark-section-subtitle {
+  font-size: 1rem;
+  color: var(--ark-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.ark-section-description {
+  font-size: 1.125rem;
+  color: var(--ark-text-light);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  text-align: center;
+}
+
+/* Product card */
+/* Product cards emulate the interactive tiles from the Figma design.  Each
+   card has a subtle border and rounded corners.  On hover the card
+   lifts slightly and casts a deeper shadow while the image zooms in. */
+.ark-product-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 1px solid rgba(226,232,240,0.6);
+  border-radius: var(--ark-radius-xl);
+  overflow: hidden;
+  background-color: #ffffff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* Elevate card on hover */
+.ark-product-card:hover {
+  transform: translateY(-0.25rem);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure product card images cover their container and smoothly zoom on hover */
+.ark-product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+/* Zoom the image when the card is hovered */
+.ark-product-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Card body padding */
+.ark-product-card .ark-product-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.ark-product-card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: var(--ark-text-dark);
+}
+
+.ark-product-card p {
+  font-size: 0.9rem;
+  color: var(--ark-text-light);
+  margin-bottom: 1rem;
+}
+
+/* Layout Components */
+.ark-flex {
+  display: flex;
+}
+
+.ark-flex-col {
+  flex-direction: column;
+}
+
+.ark-items-center {
+  align-items: center;
+}
+
+.ark-justify-between {
+  justify-content: space-between;
+}
+
+.ark-gap-1 { gap: 0.25rem; }
+.ark-gap-2 { gap: 0.5rem; }
+.ark-gap-3 { gap: 0.75rem; }
+.ark-gap-4 { gap: 1rem; }
+.ark-gap-6 { gap: 1.5rem; }
+.ark-gap-8 { gap: 2rem; }
+
+/* Typography */
+.ark-font-normal { font-weight: 400; }
+.ark-font-medium { font-weight: 500; }
+.ark-font-semibold { font-weight: 600; }
+.ark-font-bold { font-weight: 700; }
+
+/* Border Styles */
+.ark-border { border: 1px solid var(--ark-border); }
+.ark-border-t { border-top: 1px solid var(--ark-border); }
+.ark-border-b { border-bottom: 1px solid var(--ark-border); }
+
+/* Shadow Styles */
+.ark-shadow-sm { box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
+.ark-shadow { box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); }
+.ark-shadow-md { box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); }
+.ark-shadow-lg { box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
+
+/* Form styles */
+form.ark-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+form.ark-form label {
+  font-weight: 500;
+  color: var(--ark-text-dark);
+  margin-bottom: 0.25rem;
+}
+
+form.ark-form input,
+form.ark-form textarea,
+form.ark-form select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--ark-border);
+  border-radius: var(--ark-radius);
+  font-size: 1rem;
+  width: 100%;
+}
+
+form.ark-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Table styles */
+table.ark-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+table.ark-table thead {
+  background-color: var(--ark-primary);
+  color: #ffffff;
+}
+
+table.ark-table th,
+table.ark-table td {
+  padding: 0.75rem;
+  border: 1px solid var(--ark-border);
+  text-align: left;
+}
+
+table.ark-table tbody tr:nth-child(odd) {
+  background-color: var(--ark-light-bg);
+}
+
+footer.ark-footer {
+  padding: 3rem 0;
+  background-color: var(--ark-dark-bg);
+  color: #ffffff;
+  /* Align footer content to the left on all viewports */
+  text-align: left;
+}
+
+footer.ark-footer a {
+  color: var(--ark-secondary);
+  font-weight: 500;
+}
+
+/* Utility Classes */
+.ark-text-center { text-align: center; }
+.ark-text-left { text-align: left; }
+.ark-text-right { text-align: right; }
+
+.ark-mb-1 { margin-bottom: 0.25rem; }
+.ark-mb-2 { margin-bottom: 0.5rem; }
+.ark-mb-3 { margin-bottom: 0.75rem; }
+.ark-mb-4 { margin-bottom: 1rem; }
+.ark-mb-6 { margin-bottom: 1.5rem; }
+.ark-mb-8 { margin-bottom: 2rem; }
+
+.ark-mt-1 { margin-top: 0.25rem; }
+.ark-mt-2 { margin-top: 0.5rem; }
+.ark-mt-3 { margin-top: 0.75rem; }
+.ark-mt-4 { margin-top: 1rem; }
+.ark-mt-6 { margin-top: 1.5rem; }
+.ark-mt-8 { margin-top: 2rem; }
+
+.ark-mx-auto { 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ark-max-w-sm { max-width: 480px; }
+.ark-max-w-md { max-width: 600px; }
+.ark-max-w-lg { max-width: 800px; }
+
+.ark-gradient-primary {
+  background: linear-gradient(135deg, var(--ark-primary), #2D5875);
+}
+
+.ark-gradient-dark {
+  background: linear-gradient(135deg, var(--ark-dark-bg), var(--ark-primary));
+}
+
+.ark-rounded-lg { border-radius: 1rem; }
+.ark-rounded-xl { border-radius: 1.5rem; }
+
+.ark-p-4 { padding: 1rem; }
+.ark-p-6 { padding: 1.5rem; }
+.ark-p-8 { padding: 2rem; }
+.ark-p-12 { padding: 3rem; }
+
+.ark-text-sm { font-size: 0.875rem; }
+.ark-text-base { font-size: 1rem; }
+.ark-text-lg { font-size: 1.125rem; }
+.ark-text-xl { font-size: 1.25rem; }
+.ark-text-2xl { font-size: 1.5rem; }
+.ark-text-3xl { font-size: 1.875rem; }
+.ark-text-4xl { font-size: 2.25rem; }
+
+.ark-text-primary { color: var(--ark-primary); }
+.ark-text-light { color: var(--ark-text-light); }
+.ark-text-dark { color: var(--ark-text-dark); }
+.ark-text-white { color: #ffffff; }
+
+.ark-bg-light { background-color: var(--ark-light-bg); }
+.ark-bg-white { background-color: #ffffff; }
+
+/* Responsive */
+@media (min-width: 640px) {
+  .ark-hero h1 {
+    font-size: 3rem;
+  }
+  .ark-hero p {
+    font-size: 1.5rem;
+  }
+}

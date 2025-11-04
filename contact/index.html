@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Arkitor Building Technologies</title>
+  <meta name="description" content="Get in touch with Arkitor. Contact us for technical support, product samples and general enquiries. Serving builders and architects across Canada and North America.">
+  <link rel="stylesheet" href="../css/style.css">
+  <!-- Favicon for the website -->
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" as="image" href="../assets/logo.svg">
+  <!-- Open Graph meta tags for SEO -->
+  <meta property="og:title" content="Contact Arkitor Building Technologies">
+  <meta property="og:description" content="Get in touch with Arkitor for technical support, product samples and general enquiries across Canada and North America.">
+  <meta property="og:image" content="../assets/homepage-banner.png">
+  <meta property="og:type" content="website">
+</head>
+<body>
+  <!-- Header / Navigation -->
+  <header class="ark-header">
+    <div class="ark-container ark-nav" style="width:100%;">
+      <div style="display:flex; align-items:center; gap:0.5rem;">
+        <a href="../" aria-label="Arkitor homepage"><img src="../assets/logo.svg" alt="Arkitor logo" style="height:32px;width:auto;"/></a>
+        <a href="../" style="font-weight:600; font-size:1rem; color:var(--ark-primary);">Arkitor Building Technologies</a>
+      </div>
+      <!-- Mobile nav toggle -->
+      <button class="ark-nav-toggle" aria-label="Toggle navigation" onclick="toggleNav()">&#9776;</button>
+      <!-- Navigation menu with CTA inside -->
+      <nav id="nav-menu" class="ark-nav-menu">
+        <ul>
+          <li><a href="../products/">Products</a></li>
+          <li><a href="../applications/">Applications</a></li>
+          <li><a href="../resources/">Resources</a></li>
+          <li><a href="../about/">About</a></li>
+        </ul>
+        <a href="../contact/" class="ark-btn ark-btn-primary">Request a Sample</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="ark-hero" style="background-image: linear-gradient(135deg, var(--ark-dark-bg), var(--ark-primary));">
+    <!-- Grid overlay pattern for hero -->
+    <div class="ark-grid-overlay">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <pattern id="hero-grid-contact" width="60" height="60" patternUnits="userSpaceOnUse">
+            <path d="M 60 0 L 0 0 0 60" fill="none" stroke="white" stroke-width="0.5"/>
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hero-grid-contact)" />
+      </svg>
+    </div>
+    <div class="ark-container">
+      <div class="ark-hero-content" style="text-align:center; max-width:800px; margin-left:auto; margin-right:auto;">
+        <p style="color: var(--ark-secondary); font-weight:600; text-transform:uppercase; margin-bottom:0.75rem;">Get In Touch</p>
+        <h1>Contact Arkitor Building Technologies</h1>
+        <p>We're Canadian‑owned and operated, supporting builders and architects across North America.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Information and Form -->
+  <section class="ark-section">
+    <div class="ark-container">
+      <!-- Two-column layout: info/call-out and form -->
+      <div class="ark-grid" style="gap:3rem; grid-template-columns: 1fr 2fr;">
+        <!-- Contact Info Column -->
+        <div>
+          <h2 style="font-size:1.75rem; margin-bottom:2rem;">Contact Information</h2>
+          <div style="margin-bottom:3rem; display:flex; flex-direction:column; gap:1.5rem;">
+            <!-- Location -->
+            <div style="display:flex; gap:1rem;">
+              <div style="width:3rem; height:3rem; border-radius:0.75rem; background-color: rgba(58,111,146,0.1); color: var(--ark-primary); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <!-- Map pin icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <div>
+                <h3 style="margin-bottom:0.25rem; font-weight:600; color: var(--ark-text-dark);">Location</h3>
+                <p style="color: var(--ark-text-light);">2238 Queen St #137<br>Abbotsford, BC V2T 0B7</p>
+              </div>
+            </div>
+            <!-- Email -->
+            <div style="display:flex; gap:1rem;">
+              <div style="width:3rem; height:3rem; border-radius:0.75rem; background-color: rgba(58,111,146,0.1); color: var(--ark-primary); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <!-- Mail icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+              </div>
+              <div>
+                <h3 style="margin-bottom:0.25rem; font-weight:600; color: var(--ark-text-dark);">Email</h3>
+                <p style="color: var(--ark-text-light);"><a href="mailto:info@arkitorbuild.com" style="color: var(--ark-primary);">info@arkitorbuild.com</a></p>
+              </div>
+            </div>
+            <!-- Hours -->
+            <div style="display:flex; gap:1rem;">
+              <div style="width:3rem; height:3rem; border-radius:0.75rem; background-color: rgba(58,111,146,0.1); color: var(--ark-primary); display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <!-- Clock icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 6v6l4 2"></path><circle cx="12" cy="12" r="10"></circle></svg>
+              </div>
+              <div>
+                <h3 style="margin-bottom:0.25rem; font-weight:600; color: var(--ark-text-dark);">Hours</h3>
+                <p style="color: var(--ark-text-light);">Monday – Friday<br>9AM – 5PM PST</p>
+              </div>
+            </div>
+          </div>
+          <!-- Call‑out for North America distribution -->
+          <div style="background: linear-gradient(to bottom right, rgba(58,111,146,0.05), rgba(58,111,146,0.1)); border-radius:1rem; padding:2rem; border:1px solid rgba(58,111,146,0.2);">
+            <div style="text-align:center;">
+              <div style="width:6rem; height:6rem; border-radius:50%; background-color: rgba(58,111,146,0.1); color: var(--ark-primary); display:flex; align-items:center; justify-content:center; margin:0 auto 1rem;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
+              </div>
+              <h3 style="margin-bottom:0.5rem; font-weight:600; color: var(--ark-text-dark);">Serving North America</h3>
+              <p style="color: var(--ark-text-light);">Canadian headquarters with distribution across the USA and Canada</p>
+            </div>
+          </div>
+        </div>
+        <!-- Contact Form Column -->
+        <div>
+          <h2 style="font-size:1.75rem; margin-bottom:2rem;">Send Us a Message</h2>
+          <div class="ark-form-wrapper">
+            <form id="contact-form-contact" action="https://formspree.io/f/xjkplkej" method="POST" class="ark-form">
+              <div class="ark-form-grid">
+                <div class="ark-field">
+                  <label for="contact-name">Full Name *</label>
+                  <input type="text" id="contact-name" name="name" required placeholder="John Smith">
+                </div>
+                <div class="ark-field">
+                  <label for="contact-email">Email Address *</label>
+                  <input type="email" id="contact-email" name="email" required placeholder="john@company.com">
+                </div>
+                <div class="ark-field">
+                  <label for="contact-company">Company Name</label>
+                  <input type="text" id="contact-company" name="company" placeholder="Your Company Name">
+                </div>
+                <div class="ark-field">
+                  <label for="contact-province">Province / State</label>
+                  <input type="text" id="contact-province" name="province" placeholder="BC, ON, CA, etc.">
+                </div>
+              </div>
+              <div class="ark-field">
+                <label>Product Interest (Select all that apply)</label>
+                <div class="ark-checkboxes">
+                  <label><input type="checkbox" name="interest" value="ArkiShield"> ArkiShield™</label>
+                  <label><input type="checkbox" name="interest" value="ArkiCore"> ArkiCore™</label>
+                  <label><input type="checkbox" name="interest" value="ArkiFloor"> ArkiFloor™</label>
+                </div>
+              </div>
+              <div style="margin-top:1rem;">
+                <label for="contact-message">Tell us about your project or request a sample *</label>
+                <textarea id="contact-message" name="message" rows="5" required placeholder="Please share details about your project requirements, timeline and any specific questions..."></textarea>
+              </div>
+              <button type="submit" class="ark-btn ark-btn-primary" style="margin-top:1rem; width:100%;">Send Message</button>
+              <p id="contact-form-status" style="margin-top:0.5rem;"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Additional CTA -->
+  <section class="ark-section" style="background-color:var(--ark-light-bg);">
+    <div class="ark-container" style="text-align:center;">
+      <h2 style="margin-bottom:0.75rem; font-size:1.75rem; font-weight:600;">Need Technical Specifications?</h2>
+      <p style="margin-bottom:1.5rem; font-size:1.15rem; color:var(--ark-text-light); max-width:600px; margin-left:auto; margin-right:auto;">Download detailed product data sheets, installation guides and certifications from our resources page.</p>
+      <a href="../resources/" class="ark-btn ark-btn-secondary">View Resources</a>
+    </div>
+  </section>
+
+  <!-- Unified Footer -->
+  <footer class="ark-footer">
+    <div class="ark-container">
+      <div class="ark-footer-top" style="display:flex; flex-wrap:wrap; gap:2rem;">
+        <div style="flex:1 1 250px;">
+          <img src="../assets/logo-white.svg" alt="Arkitor logo" style="height:40px; width:auto; margin-bottom:1rem;">
+          <h4 style="color: var(--ark-secondary); margin-bottom:0.25rem; font-size:1rem; font-weight:600;">Arkitor Building Technologies</h4>
+          <p style="color:#cbd5e1; font-size:0.9rem; line-height:1.5; max-width:280px;">Canadian‑owned manufacturer of premium magnesium oxide building panels.</p>
+        </div>
+        <div style="flex:1 1 150px;">
+          <h4 style="color:#ffffff; margin-bottom:0.5rem; font-size:1rem; font-weight:600;">Products</h4>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="../arkishield/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">ArkiShield™ Exterior</a></li>
+            <li><a href="../arkicore/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">ArkiCore™ Interior</a></li>
+            <li><a href="../arkifloor/" style="color:#cbd5e1; display:block;">ArkiFloor™ Subfloor</a></li>
+          </ul>
+        </div>
+        <div style="flex:1 1 150px;">
+          <h4 style="color:#ffffff; margin-bottom:0.5rem; font-size:1rem; font-weight:600;">Solutions</h4>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="../applications/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">Applications</a></li>
+            <li><a href="../resources/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">Technical Resources</a></li>
+            <li><a href="../resources/" style="color:#cbd5e1; display:block;">Case Studies</a></li>
+          </ul>
+        </div>
+        <div style="flex:1 1 150px;">
+          <h4 style="color:#ffffff; margin-bottom:0.5rem; font-size:1rem; font-weight:600;">Company</h4>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="../about/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">About Arkitor</a></li>
+            <li><a href="../resources/" style="color:#cbd5e1; display:block; margin-bottom:0.25rem;">Sustainability</a></li>
+            <li><a href="../contact/" style="color:#cbd5e1; display:block;">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="ark-footer-bottom" style="margin-top:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;">
+        <p style="color:#cbd5e1; font-size:0.875rem;">&copy; 2025 Arkitor Building Technologies Inc. All rights reserved.</p>
+        <div class="ark-pill-yellow">
+          <div style="width:0.5rem; height:0.5rem; border-radius:50%; background-color: var(--ark-secondary);"></div>
+          <span>Canadian‑Owned &amp; Engineered</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Form submission script for contact page -->
+  <script>
+    const contactForm = document.getElementById('contact-form-contact');
+    if (contactForm) {
+      contactForm.addEventListener('submit', async function(event) {
+        event.preventDefault();
+        const status = document.getElementById('contact-form-status');
+        const data = new FormData(contactForm);
+        // Gather product interests and append to message
+        const interests = [...contactForm.querySelectorAll('input[name="interest"]:checked')].map(i => i.value).join(', ');
+        if (interests) {
+          const currentMessage = data.get('message');
+          data.set('message', currentMessage + '\n\nInterested in: ' + interests);
+        }
+        try {
+          const response = await fetch(contactForm.action, {
+            method: contactForm.method,
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+          if (response.ok) {
+            status.textContent = 'Thanks for your submission!';
+            contactForm.reset();
+          } else {
+            const resData = await response.json();
+            if (resData.errors) {
+              status.textContent = resData.errors.map(err => err.message).join(', ');
+            } else {
+              status.textContent = 'Oops! There was a problem submitting your form';
+            }
+          }
+        } catch (error) {
+          status.textContent = 'Oops! There was a problem submitting your form';
+        }
+      });
+    }
+  </script>
+
+  <!-- Navigation Toggle Script -->
+  <script>
+    function toggleNav() {
+      var menu = document.getElementById('nav-menu');
+      if (menu) {
+        menu.classList.toggle('open');
+      }
+    }
+  </script>
+
+</body>
+</html>
