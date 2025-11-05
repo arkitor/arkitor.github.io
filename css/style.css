@@ -558,6 +558,12 @@ header.ark-header {
     margin-top: auto; /* pushes the button to the bottom */
 }
 
+.applications-grid .ark-card a.ark-btn {
+    width: fit-content;         /* lets the button wrap tightly around the text */
+    align-self: flex-start;     /* keeps it aligned to the left of the card */
+    margin-top: auto;           /* (optional) pushes the button to the bottom if using flex layout */
+}
+
 /* Section headings */
 .ark-section {
   padding: 4rem 0;
