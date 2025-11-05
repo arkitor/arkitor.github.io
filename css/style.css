@@ -377,6 +377,14 @@ header.ark-header {
   color: var(--ark-dark-bg);
 }
 
+.ark-btn-yellow {
+    background-color: var(--ark-secondary);
+    color: var(--ark-dark-bg);
+}
+.ark-btn-yellow:hover {
+    background-color: #f59e0b; /* optional hover colour */
+}
+
 /* Call‑out badge used in hero sections (e.g., Canadian‑Owned & Engineered).  */
 .ark-callout {
   display: inline-flex;
