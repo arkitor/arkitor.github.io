@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /assets/private/
+Disallow: /head/
+Disallow: /schema/
 
 Sitemap: https://arkitorbuild.com/sitemap.xml

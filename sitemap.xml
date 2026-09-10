@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url><loc>https://arkitorbuild.com/</loc></url>
-  <url><loc>https://arkitorbuild.com/products/</loc></url>
-  <url><loc>https://arkitorbuild.com/arkicore/</loc></url>
-  <url><loc>https://arkitorbuild.com/arkishield/</loc></url>
-  <url><loc>https://arkitorbuild.com/arkifloor/</loc></url>
-  <url><loc>https://arkitorbuild.com/arkidecor/</loc></url>
-  <url><loc>https://arkitorbuild.com/arkitrim/</loc></url>
-  <url><loc>https://arkitorbuild.com/arkisip/</loc></url>
-  <url><loc>https://arkitorbuild.com/arkixt/</loc></url>
-  <url><loc>https://arkitorbuild.com/applications/</loc></url>
-  <url><loc>https://arkitorbuild.com/resources/</loc></url>
-  <url><loc>https://arkitorbuild.com/about/</loc></url>
-  <url><loc>https://arkitorbuild.com/contact/</loc></url>
+  <url><loc>https://arkitorbuild.com/products/</loc><lastmod>2026-09-10</lastmod></url>
+  <url><loc>https://arkitorbuild.com/applications/</loc><lastmod>2026-09-10</lastmod></url>
+  <url><loc>https://arkitorbuild.com/resources/</loc><lastmod>2026-09-10</lastmod></url>
+  <url><loc>https://arkitorbuild.com/about/</loc><lastmod>2026-09-10</lastmod></url>
+  <url><loc>https://arkitorbuild.com/contact/</loc><lastmod>2026-09-10</lastmod></url>
+  <url><loc>https://arkitorbuild.com/privacy/</loc><lastmod>2026-09-10</lastmod></url>
 </urlset>
